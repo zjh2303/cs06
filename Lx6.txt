@@ -1,0 +1,63 @@
+﻿C＃企业级开发技术练习6答题卡
+
+班级：计算机信息管理2班     
+姓名： 张佳楠
+学号：20190307230
+
+*注：排除答案放置在序号下方。* /
+
+（一）
+
+命名空间ConsoleApp1
+{
+    班主任<T>
+    {
+        公共无效字段（字符串fieldName，T t）
+        {
+            Console.WriteLine（$“ {fieldName}：{t}，类型是{t.GetType（）。Name}”））;
+        }
+    }
+    班级计划
+    {
+        静态void Main（string [] args）
+        {
+            Teacher <string> stu1 =新的Teacher <string>（）;
+            stu1.field（“姓名”，“ zhao”）;
+            Teacher <decimal> stu2 =新的Teacher <decimal>（）;
+            stu2.field（“工资”，8202.34M）;
+            Teacher <bool> stu3 =新的Teacher <bool>（）;
+            stu3.field（“编制”，false）;
+            Teacher <Single> stu4 = new Teacher <Single>（）;
+            stu4.field（“评价”，90.23f）;
+            Teacher <DateTime> stu5 =新Teacher <DateTime>（）;
+            stu5.field（“工作日期”，新的DateTime（））;
+        }
+    }
+}
+
+（二）
+
+命名空间ConsoleApp2
+{
+    接口IPay <P，Q>
+    {
+        无效Log（P x，Q y）;
+    }
+    Employee <T>类：IPay <T，字符串>
+    {
+        公共无效Log（T pay，字符串名称）=>
+              Console.WriteLine（$“ {name}：{pay}，类型是{pay.GetType（）。Name}”））;
+    }
+    班级计划
+    {
+        静态void Main（string [] args）
+        {
+            Employee <Int64> c1 =新的Employee <Int64>（）;
+            c1.Log（30000，“年终奖”）;
+
+            Employee <decimal> c2 =新的Employee <decimal>（）;
+            c2.Log（54321.67M，“核增绩效”）;
+        }
+    }
+}
+
